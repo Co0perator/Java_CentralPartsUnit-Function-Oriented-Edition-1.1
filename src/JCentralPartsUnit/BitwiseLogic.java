@@ -1,4 +1,4 @@
-package CPartsU;
+package JCentralPartsUnit;
 
 class BitwiseLogic { //this class contains bitwise logic for two bytes of any size (or one byte in the case of NOT)
 

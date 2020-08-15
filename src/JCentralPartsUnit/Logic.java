@@ -1,4 +1,4 @@
-package CPartsU;
+package JCentralPartsUnit;
 
 public class Logic { //this class contains single bit logic
     public static char OR(char BIT_A, char BIT_B) {

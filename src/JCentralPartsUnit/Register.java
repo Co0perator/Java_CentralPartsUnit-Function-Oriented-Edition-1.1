@@ -1,6 +1,5 @@
-package CPartsU;
+package JCentralPartsUnit;
 
-import java.io.Serializable;
 import java.util.Arrays;
 
 public class Register {
