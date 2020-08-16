@@ -24,11 +24,18 @@ public class ComplexLogic {
         char OUT = 0;
         int bits = BIT_A + BIT_B + CARRY_IN;
         switch (bits) {
-            case 1 -> OUT = 1;
-            case 2 -> C_OUT = 1;
+            case 1 -> {
+                OUT = 1;
+                break;
+            }
+            case 2 -> {
+                C_OUT = 1;
+                break;
+            }
             case 3 -> {
                 C_OUT = 1;
                 OUT = 1;
+                break;
             }
         }
         return new char[]{OUT, C_OUT};
@@ -39,8 +46,14 @@ public class ComplexLogic {
         char OUT = 0;
         char C_OUT = 0;
         switch (bits) {
-            case 1 -> OUT = 1;
-            case 2 -> C_OUT = 1;
+            case 1 -> {
+                OUT = 1;
+                break;
+            }
+            case 2 -> {
+                C_OUT = 1;
+                break;
+            }
         }
         return new char[]{OUT, C_OUT};
     }
