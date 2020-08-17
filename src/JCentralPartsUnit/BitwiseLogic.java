@@ -25,13 +25,9 @@ class BitwiseLogic { //this class contains bitwise logic for two bytes of any si
             return null;
         } else {
             char[] output = new char[BYTE_A.length];
-            for (int i = 0; i < BYTE_A.length; i++) {
-                if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) {
-                    output[i] = 1;
-                } else {
-                    output[i] = 0;
-                }
-            }
+            for (int i = 0; i < BYTE_A.length; i++)
+                if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) output[i] = 1;
+                else output[i] = 0;
             return output;
         }
     }
@@ -42,13 +38,9 @@ class BitwiseLogic { //this class contains bitwise logic for two bytes of any si
             return null;
         } else {
             char[] output = new char[BYTE_A.length];
-            for (int i = 0; i < BYTE_A.length; i++) {
-                if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) {
-                    output[i] = 0;
-                } else {
-                    output[i] = 1;
-                }
-            }
+            for (int i = 0; i < BYTE_A.length; i++)
+                if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) output[i] = 0;
+                else output[i] = 1;
             return output;
         }
     }
@@ -59,17 +51,10 @@ class BitwiseLogic { //this class contains bitwise logic for two bytes of any si
             return null;
         } else {
             char[] output = new char[BYTE_A.length];
-            for (int i = 0; i < BYTE_A.length; i++) {
-                if (BYTE_A[i] >= 1 && BYTE_B[i] >= 1) {
-                    output[i] = 0;
-                } else {
-                    if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) {
-                        output[i] = 1;
-                    } else {
-                        output[i] = 0;
-                    }
-                }
-            }
+            for (int i = 0; i < BYTE_A.length; i++)
+                if (BYTE_A[i] >= 1 && BYTE_B[i] >= 1) output[i] = 0;
+                else if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) output[i] = 1;
+                else output[i] = 0;
             return output;
         }
     }
@@ -80,17 +65,10 @@ class BitwiseLogic { //this class contains bitwise logic for two bytes of any si
             return null;
         } else {
             char[] output = new char[BYTE_A.length];
-            for (int i = 0; i < BYTE_A.length; i++) {
-                if (BYTE_A[i] >= 1 && BYTE_B[i] >= 1) {
-                    output[i] = 1;
-                } else {
-                    if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) {
-                        output[i] = 0;
-                    } else {
-                        output[i] = 1;
-                    }
-                }
-            }
+            for (int i = 0; i < BYTE_A.length; i++)
+                if (BYTE_A[i] >= 1 && BYTE_B[i] >= 1) output[i] = 1;
+                else if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) output[i] = 0;
+                else output[i] = 1;
             return output;
         }
     }
@@ -101,13 +79,9 @@ class BitwiseLogic { //this class contains bitwise logic for two bytes of any si
             return null;
         } else {
             char[] output = new char[BYTE_A.length];
-            for (int i = 0; i < BYTE_A.length; i++) {
-                if (BYTE_A[i] >= 1 && BYTE_B[i] >= 1) {
-                    output[i] = 1;
-                } else {
-                    output[i] = 0;
-                }
-            }
+            for (int i = 0; i < BYTE_A.length; i++)
+                if (BYTE_A[i] >= 1 && BYTE_B[i] >= 1) output[i] = 1;
+                else output[i] = 0;
             return output;
         }
     }
@@ -118,26 +92,19 @@ class BitwiseLogic { //this class contains bitwise logic for two bytes of any si
             return null;
         } else {
             char[] output = new char[BYTE_A.length];
-            for (int i = 0; i < BYTE_A.length; i++) {
-                if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) {
-                    output[i] = 0;
-                } else {
-                    output[i] = 1;
-                }
-            }
+            for (int i = 0; i < BYTE_A.length; i++)
+                if (BYTE_A[i] >= 1 || BYTE_B[i] >= 1) output[i] = 0;
+                else output[i] = 1;
             return output;
         }
     }
 
     public static char[] BITWISE_NOT(char[] BYTE) {
     char[] output = new char[BYTE.length]; //output BYTE
-        for (int i = 0; i < BYTE.length; i++) { //going through the indices doing the NOT operation;
-        if (BYTE[i] >= 1) {
-            output[i] = 0;
-        } else {
-            output[i] = 1;
-        }
-    }
+        //going through the indices doing the NOT operation;
+        for (int i = 0; i < BYTE.length; i++)
+            if (BYTE[i] >= 1) output[i] = 0;
+            else output[i] = 1;
         return output;
     }
 }
